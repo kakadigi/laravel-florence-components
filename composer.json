@@ -1,0 +1,47 @@
+{
+    "name": "kakadigi/florence",
+    "description": "Laravel package to provide florence components",
+    "type": "library",
+    "homepage": "https://github.com/kakadigi/laravel-florence-components",
+    "require": {
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0",
+        "spatie/laravel-ray": "^1.25"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kakadigi\\Florence\\Components\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iwan Firmawan",
+            "email": "firmawaneiwan@gmail.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Kakadigi\\Florence\\Components\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kakadigi\\Florence\\Components\\FlorenceServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
