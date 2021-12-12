@@ -1,10 +1,10 @@
 <?php
 
-namespace Kakadigi\Florence\Components\Test;
+namespace Kakadigi\FlorenceComponent\Test;
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Kakadigi\Florence\Components\FlorenceServiceProvider;
+use Kakadigi\FlorenceComponent\FlorenceServiceProvider;
 
 class TestCase extends Orchestra
 {

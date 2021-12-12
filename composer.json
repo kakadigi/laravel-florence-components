@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kakadigi\\Florence\\Components\\": "src"
+            "Kakadigi\\FlorenceComponent\\": "src"
         }
     },
     "license": "MIT",
@@ -26,13 +26,13 @@
     ],
     "autoload-dev": {
         "psr-4": {
-            "Kakadigi\\Florence\\Components\\Test\\": "tests"
+            "Kakadigi\\FlorenceComponent\\Test\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kakadigi\\Florence\\Components\\FlorenceServiceProvider"
+                "Kakadigi\\FlorenceComponent\\FlorenceServiceProvider"
             ]
         }
     },

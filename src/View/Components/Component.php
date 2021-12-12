@@ -1,6 +1,6 @@
 <?php
 
-namespace Kakadigi\Florence\Components\View\Components;
+namespace Kakadigi\FlorenceComponent\View\Components;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component as BaseComponent;
@@ -18,8 +18,8 @@ abstract class Component extends BaseComponent
     public function render()
     {
         $alias = Str::kebab(class_basename($this));
-
-        return view("kd-florence-components::$this->namespace.$alias");
+        $namespace = config('florence.view.namespace', 'kd-florence');
+        return view("$namespace::$this->namespace.$alias");
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kakadigi\Florence\Components;
+namespace Kakadigi\FlorenceComponent;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -26,7 +26,7 @@ class FlorenceServiceProvider extends ServiceProvider
             ], 'config');
         }
 
-        $this->loadViewsFrom(self::PATH_VIEWS, 'kd-florence-components');
+        $this->loadViewsFrom(self::PATH_VIEWS, 'kd-florence');
 
         $this
             ->registerComponents()
@@ -44,13 +44,13 @@ class FlorenceServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register the Blade form components.
+     * Register the Blade page components.
      *
      * @return $this
      */
     private function registerComponents(): self
     {
-        // Blade::componentNamespace('Kakadigi\\Florence\\Components\\View\\Components\\Navigation', config('florence.prefix.navigation'));
+        Blade::componentNamespace('Kakadigi\\FlorenceComponent\\View\\Components\\Page', config('florence.prefix.page'));
         return $this;
     }
 
@@ -62,12 +62,12 @@ class FlorenceServiceProvider extends ServiceProvider
     public function registerComponentsPublishers(): self
     {
         $this->publishes([
-            self::PATH_VIEWS => resource_path('views/vendor/kd-florence-components'),
+            self::PATH_VIEWS => resource_path(config('florence.view.path')),
         ], 'components');
 
-        //$this->publishes([
-          //  self::PATH_VIEWS . '/form' => resource_path('views/vendor/kd-florence-components/form'),
-        //], 'form-components');
+        $this->publishes([
+            self::PATH_VIEWS . '/page' => resource_path(config('florence.view.path') . '/page'),
+        ], 'page-components');
 
         return $this;
     }
