@@ -19,7 +19,7 @@ abstract class Component extends BaseComponent
     {
         $alias = Str::kebab(class_basename($this));
         $namespace = config('florence.view.namespace', 'kd-florence');
-        return view("$namespace::$this->namespace.$alias");
+        return view("$namespace::components.{$this->namespace}.$alias");
     }
 
     /**
