@@ -17,7 +17,12 @@
                     <span>{{ $date }}</span>
                 </span>
                 <span>
-                    <span class="mdi mdi-checkbox-blank-outline"></span>
+                    @if ($progress['done'] === $progress['all'])
+                        <span class="mdi mdi-checkbox-marked"></span>
+                    @else
+                        <span class="mdi mdi-checkbox-blank-outline"></span>
+                    @endif
+                    
                     <span>{{ $progress['done'] }}/{{ $progress['all'] }}</span>
                 </span>
             </div>
