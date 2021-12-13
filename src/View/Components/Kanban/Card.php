@@ -6,17 +6,13 @@ use Kakadigi\FlorenceComponent\View\Components\Kanban\KanbanComponent;
 
 class Card extends KanbanComponent
 {
-    public string $title;
-    public string $pic;
-    public string $date;
-    public array $progress;
+    public $title;
+    public $pic;
+    public $date;
+    public $progress;
 
-    public function __construct(
-        ?string $title = null,
-        ?string $pic = null,
-        ?string $date = null,
-        ?array $progress = []
-    )
+
+    public function __construct($title = null, $pic = null, $date = null, $progress = [])
     {
         parent::__construct();
         $this->title = $title;
