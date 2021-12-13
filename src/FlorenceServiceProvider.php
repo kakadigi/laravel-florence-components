@@ -51,6 +51,8 @@ class FlorenceServiceProvider extends ServiceProvider
     private function registerComponents(): self
     {
         Blade::componentNamespace('Kakadigi\\FlorenceComponent\\View\\Components\\Page', config('florence.prefix.page'));
+        Blade::componentNamespace('Kakadigi\\FlorenceComponent\\View\\Components\\Grid', 'grid');
+        Blade::componentNamespace('Kakadigi\\FlorenceComponent\\View\\Components\\Kanban', 'kanban');
         return $this;
     }
 
@@ -64,10 +66,6 @@ class FlorenceServiceProvider extends ServiceProvider
         $this->publishes([
             self::PATH_VIEWS => resource_path(config('florence.view.path')),
         ], 'components');
-
-        $this->publishes([
-            self::PATH_VIEWS . '/page' => resource_path(config('florence.view.path') . '/page'),
-        ], 'page-components');
 
         return $this;
     }
