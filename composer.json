@@ -4,7 +4,7 @@
     "type": "library",
     "homepage": "https://github.com/kakadigi/laravel-florence-components",
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^7.3|^7.4|^8.0",
         "laravel/framework": "^8.0"
     },
     "require-dev": {
