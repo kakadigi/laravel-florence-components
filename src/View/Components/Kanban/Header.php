@@ -6,8 +6,8 @@ use Kakadigi\FlorenceComponent\View\Components\Kanban\KanbanComponent;
 
 class Header extends KanbanComponent
 {
-    public string $title;
-    public function __construct(?string $title = null)
+    public $title;
+    public function __construct($title = null)
     {
         parent::__construct();
         $this->title = $title;
